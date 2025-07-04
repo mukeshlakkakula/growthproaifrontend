@@ -8,11 +8,14 @@ function BusinessForm({ setBusinessData, setLoading }) {
     e.preventDefault();
     if (!name || !location) return alert("Both fields are required.");
     setLoading(true);
-    const res = await fetch("http://localhost:5000/business-data", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, location }),
-    });
+    const res = await fetch(
+      "https://growthprobackend.onrender.com/business-data",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, location }),
+      }
+    );
     const data = await res.json();
     setBusinessData({ ...data, name, location });
     setLoading(false);

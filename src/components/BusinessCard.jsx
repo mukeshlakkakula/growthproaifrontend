@@ -1,7 +1,7 @@
 function BusinessCard({ data, setBusinessData }) {
   const handleRegenerate = async () => {
     const res = await fetch(
-      `http://localhost:5000/regenerate-headline?name=${data.name}&location=${data.location}`
+      `https://growthprobackend.onrender.com/regenerate-headline?name=${data.name}&location=${data.location}`
     );
     const newHeadline = await res.json();
     setBusinessData({ ...data, headline: newHeadline.headline });
