@@ -34,7 +34,7 @@ export default function BusinessDashboard() {
           </div>
         </div>
         <div className="flex items-center gap-4">
-          <FaBell className="text-gray-500" />
+          {/* <FaBell className="text-gray-500" /> */}
           <FaUserCircle className="text-2xl text-gray-600" />
         </div>
       </header>
@@ -78,7 +78,7 @@ export default function BusinessDashboard() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <button
               onClick={handleAnalyze}
-              className="bg-sky-500/100 text-red px-6 py-2 rounded hover:bg-blue-700"
+              className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-700"
             >
               Analyze Business
             </button>
