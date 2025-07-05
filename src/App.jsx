@@ -44,7 +44,7 @@ function App() {
     );
     const json = await res.json();
     setData((prev) => ({ ...prev, headline: json.headline }));
-    toast.success("SEO headline regenerated");
+    toast.info("SEO headline regenerated");
   };
 
   const copyHeadline = () => {
